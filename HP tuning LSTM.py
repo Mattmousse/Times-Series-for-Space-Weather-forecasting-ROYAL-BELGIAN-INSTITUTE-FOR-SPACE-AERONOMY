@@ -224,41 +224,6 @@ best_model = tuner.get_best_models(num_models=1)[0]
 print("Best model summary:" )
 best_model.summary()
 
-"""Best model e5 
-_________________________________________________________________
- Layer (type)                Output Shape              Param #   
-=================================================================
- lstm (LSTM)                 (None, 48, 112)           53312     
-                                                                 
- dropout (Dropout)           (None, 48, 112)           0         
-                                                                 
- lstm_1 (LSTM)               (None, 12)                6000      
-                                                                 
- dropout_1 (Dropout)         (None, 12)                0         
-                                                                 
- dense (Dense)               (None, 12)                156       
-                                                                 
-=================================================================
-Total params: 59,468
-Trainable params: 59,468
-Non-trainable params: 0
-_________________________________________________________________
-
-Value             |Best Value So Far |Hyperparameter
-1                 |2                 |num_lstm_layers
-10                |12                |units_last_lstm_layers
-0.0001            |0.001             |learning_rate
-32                |112               |units_1
-80                |88                |units_2
-15                |15                |tuner/epochs
-0                 |5                 |tuner/initial_epoch
-0                 |2                 |tuner/bracket
-0                 |2                 |tuner/round
-
-"""
-
-
-
 
 
 
