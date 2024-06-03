@@ -211,79 +211,7 @@ best_model = tuner.get_best_models(num_models=1)[0]
 print("Best model summary:" )
 best_model.summary()
 
-""" Best model e5
-Layer (type)                Output Shape              Param #      learning rate 1e-3
-=================================================================
- conv1d (Conv1D)             (None, 1, 46, 192)        3648       kernel size = 3   
-                                                                 
- batch_normalization (BatchN  (None, 1, 46, 192)       768       
- ormalization)                                                   
-                                                                 
- max_pooling2d (MaxPooling2D  (None, 1, 23, 192)       0         
- )                                                               
-                                                                 
- dropout (Dropout)           (None, 1, 23, 192)        0         
-                                                                 
- flatten (Flatten)           (None, 4416)              0         
-                                                                 
- dense (Dense)               (None, 128)               565376    
-                                                                 
- dense_1 (Dense)             (None, 192)               24768     
-                                                                 
- dense_2 (Dense)             (None, 12)                2316      
-                                                                 
- dropout_1 (Dropout)         (None, 12)                0         
-                                                                 
-=================================================================
-Total params: 596,876
-Trainable params: 596,492
-Non-trainable params: 384
-_________________________________________________________________
-"""
 
-
-""" Best model e1
-________________________________________________________________
- Layer (type)                Output Shape              Param #    learning rate 1e-4
-=================================================================
- conv1d (Conv1D)             (None, 1, 46, 96)         1824      kernel size = 3  
-                                                                 
- batch_normalization (BatchN  (None, 1, 46, 96)        384       
- ormalization)                                                   
-                                                                 
- max_pooling2d (MaxPooling2D  (None, 1, 23, 96)        0         
- )                                                               
-                                                                 
- dropout (Dropout)           (None, 1, 23, 96)         0         
-                                                                 
- conv1d_1 (Conv1D)           (None, 1, 22, 224)        43232     kernel size = 2
-                                                                 
- batch_normalization_1 (Batc  (None, 1, 22, 224)       896       
- hNormalization)                                                 
-                                                                 
- max_pooling2d_1 (MaxPooling  (None, 1, 11, 224)       0         
- 2D)                                                             
-                                                                 
- dropout_1 (Dropout)         (None, 1, 11, 224)        0         
-                                                                 
- flatten (Flatten)           (None, 2464)              0         
-                                                                 
- dense (Dense)               (None, 320)               788800    
-                                                                 
- dense_1 (Dense)             (None, 384)               123264    
-                                                                 
- dense_2 (Dense)             (None, 192)               73920     
-                                                                 
- dense_3 (Dense)             (None, 12)                2316      
-                                                                 
- dropout_2 (Dropout)         (None, 12)                0         
-                                                                 
-=================================================================
-Total params: 1,034,636
-Trainable params: 1,033,996
-Non-trainable params: 640
-_________________________________________________________________
-"""
 
 
 
